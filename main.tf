@@ -65,7 +65,7 @@ resource "aws_route_table" "edu_public_rt" {
   }
 
   tags = {
-    Name = "Public Route Table"
+    Name = "Edu Public Route Table"
   }
 }
 
@@ -102,7 +102,6 @@ resource "aws_security_group" "edu_web_ssh_sg" {
 resource "aws_instance" "edu" {
   ami           = data.aws_ami.debian.id
   instance_type = "m5.2xlarge"
-  #instance_type = "t3.micro"
   key_name      = "edu-keypair"
 
   subnet_id                   = aws_subnet.edu_public_subnet.id
