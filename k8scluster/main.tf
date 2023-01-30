@@ -65,7 +65,7 @@ resource "aws_route_table" "edu_public_rt" {
   }
 
   tags = {
-    Name = "Public Route Table"
+    Name = "Example Public Route Table"
   }
 }
 
